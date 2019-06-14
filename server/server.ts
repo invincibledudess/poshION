@@ -7,6 +7,7 @@ import {sendNewsletter} from "./send-newsletter.route";
 import {validateUser} from "./validate-user.route";
 import {getUserOrders, getOrderById, createOrderReview} from "./user-orders.route";
 import {getMenuItems, addItem, updateItem, createItemReview} from "./menu-items.route";
+import {readAllFeedbacks} from "./feedback.route";
 const bodyParser = require('body-parser');
 
 const webpush = require('web-push');
@@ -61,10 +62,13 @@ app.route('/api/item/:itemId')
     .put(updateItem);
 
 app.route('/api/item/:itemId/review')
-    .put(createItemReview);
+    .post(createItemReview);
 
 app.route('/api/order/:orderId/review')
-    .put(createOrderReview);
+    .post(createOrderReview);
+
+app.route('/api/feedback')
+    .get(readAllFeedbacks);
 
 // launch an HTTP Server
 const httpServer = app.listen(9000, () => {
