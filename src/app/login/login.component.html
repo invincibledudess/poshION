@@ -1,0 +1,12 @@
+<div>
+    <h3>Log in</h3>
+    <mat-form-field>
+        <input matInput placeholder="Username" [formControl]="username">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Password" type="password" [formControl]="password">
+    </mat-form-field>
+    <div>
+        <button mat-raised-button color="primary" (click)="submit()">Submit</button>  
+    </div>
+</div>

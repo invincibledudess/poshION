@@ -13,22 +13,24 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 
 
 
-
-
-
-
-
-
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AppRoutingModule} from "./app-routing.module";
 import {NewsletterService} from "./services/newsletter.service";
+import {MatFormFieldModule, MatInputModule, MatButtonModule} from '@angular/material';
+
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { Login } from './login/login.component';
+import { LoginService } from './login/login.service';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard';
+
 
 @NgModule({
     declarations: [
         AppComponent,
         LessonsComponent,
-        UserDashboardComponent
+        UserDashboardComponent,
+        AdminDashboardComponent,
+        Login
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -37,11 +39,14 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
         AppRoutingModule,
         ReactiveFormsModule,
         ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
-
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule
     ],
     providers: [
         LessonsService,
         NewsletterService,
+        LoginService,
     ],
     bootstrap: [AppComponent]
 })
