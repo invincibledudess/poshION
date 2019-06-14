@@ -1,0 +1,42 @@
+export const USERS = {
+    surjeet: {
+        role: 'vendor',
+        name: 'Surjeet',
+        email: 'surjeet@iongroup.com',
+        password: 'surjeet_pwd',
+        prefferedNumber: 9090887761,
+        pastOrders: [],
+    },
+    shantnu: {
+        role: 'customer',
+        name: 'Shantnu',
+        email: 'shantnu@iongroup.com',
+        password: 'shantnu_pwd',
+        prefferedNumber: 9090887762,
+        pastOrders: [],
+    },
+    kashif: {
+        role: 'customer',
+        name: 'Kashif',
+        email: 'kashif@iongroup.com',
+        password: 'kashif_pwd',
+        prefferedNumber: 9090887763,
+        pastOrders: [],
+    },
+    devanshu: {
+        role: 'customer',
+        name: 'Devanshu',
+        email: 'devanshu@iongroup.com',
+        password: 'devanshu_pwd',
+        prefferedNumber: 9090887764,
+        pastOrders: [],
+    },
+    neha: {
+        role: 'customer',
+        name: 'Neha',
+        email: 'neha@iongroup.com',
+        password: 'neha_pwd',
+        prefferedNumber: 9090887764,
+        pastOrders: [],
+    },
+}
