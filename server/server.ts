@@ -4,7 +4,10 @@ import {Application} from "express";
 import {readAllLessons} from "./read-all-lessons.route";
 import {addPushSubscriber} from "./add-push-subscriber.route";
 import {sendNewsletter} from "./send-newsletter.route";
-import {validateUser} from "./validate-user.route"
+import {validateUser} from "./validate-user.route";
+import {getUserOrders, getOrderById, createOrderReview} from "./user-orders.route";
+import {getMenuItems, addItem, updateItem, createItemReview} from "./menu-items.route";
+import {readAllFeedbacks} from "./feedback.route";
 const bodyParser = require('body-parser');
 
 const webpush = require('web-push');
@@ -43,7 +46,29 @@ app.route('/api/newsletter')
 app.route('/api/login')
     .post(validateUser);
 
+app.route('/api/user/:userId/orders')
+    .get(getUserOrders);
 
+app.route('/api/user/:userId/order/:orderId')
+    .get(getOrderById);
+
+app.route('/api/menu')
+    .get(getMenuItems);
+
+app.route('/api/item')
+    .post(addItem);
+
+app.route('/api/item/:itemId')
+    .put(updateItem);
+
+app.route('/api/item/:itemId/review')
+    .post(createItemReview);
+
+app.route('/api/order/:orderId/review')
+    .post(createOrderReview);
+
+app.route('/api/feedback')
+    .get(readAllFeedbacks);
 
 // launch an HTTP Server
 const httpServer = app.listen(9000, () => {
