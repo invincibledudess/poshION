@@ -4,6 +4,7 @@ import {Application} from "express";
 import {readAllLessons} from "./read-all-lessons.route";
 import {addPushSubscriber} from "./add-push-subscriber.route";
 import {sendNewsletter} from "./send-newsletter.route";
+import {validateUser} from "./validate-user.route"
 const bodyParser = require('body-parser');
 
 const webpush = require('web-push');
@@ -38,6 +39,9 @@ app.route('/api/notifications')
 
 app.route('/api/newsletter')
     .post(sendNewsletter);
+
+app.route('/api/login')
+    .post(validateUser);
 
 
 
