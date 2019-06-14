@@ -9,10 +9,9 @@ import { Router } from '@angular/router';
     styleUrls: ['./login.component.css']
 })
 export class Login {
-  
-    username = new FormControl('');
-    password = new FormControl('');
-    constructor(private loginService:LoginService, private router: Router) {}
+  username = new FormControl('');
+  password = new FormControl('');
+  constructor(private loginService:LoginService, private router: Router) {}
 
   submit() {
     this.loginService.login({username: this.username.value, password: this.password.value}).subscribe(

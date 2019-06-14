@@ -1,0 +1,22 @@
+.top-admin-card-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-container {
+
+}
+
+.order-header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.margin-right {
+  margin-right: 10px;
+  align-self: center;
+}
+
+.toggle-order-status-container {
+    display: flex;
+}

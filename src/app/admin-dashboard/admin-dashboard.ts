@@ -6,5 +6,11 @@ import {Component} from '@angular/core';
     styleUrls: ['./admin-dashboard.component.css']
 })
 export class AdminDashboardComponent {
-    constructor() {}
+  showAllOrders = false;
+  constructor() {}
+
+  toggleOrderStatusVisibility() {
+    this.showAllOrders = !this.showAllOrders;
+    console.log(this.showAllOrders);
+  }
 }
