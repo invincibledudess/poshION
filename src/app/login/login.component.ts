@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { LoginService } from './login.service';
+import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'login',
@@ -6,5 +9,21 @@ import { Component } from '@angular/core';
     styleUrls: ['./login.component.css']
 })
 export class Login {
-    constructor() {}
+  
+    username = new FormControl('');
+    password = new FormControl('');
+    constructor(private loginService:LoginService, private router: Router) {}
+
+  submit() {
+    this.loginService.login({username: this.username.value, password: this.password.value}).subscribe(
+        (userDetails) => {
+          if (userDetails['role'] === 'customer') {
+            this.router.navigate(['/userDashboard']);
+          } else {
+            this.router.navigate(['/adminDashboard']);
+          }
+        },
+        err =>  console.log('Could not send subscription object to server, reason: ', err)
+    );
+  }
 }

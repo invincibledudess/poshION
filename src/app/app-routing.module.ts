@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {LessonsComponent} from "./lessons/lessons.component";
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { Login } from './login/login.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard'; 
 
  const routes: Routes = [
     {
@@ -10,7 +11,11 @@ import { Login } from './login/login.component';
         component: Login
     },
     {
-        path: 'menu',
+        path: 'adminDashboard',
+        component: AdminDashboardComponent
+    },
+    {
+        path: 'userDashboard',
         component: UserDashboardComponent
     }
 ];

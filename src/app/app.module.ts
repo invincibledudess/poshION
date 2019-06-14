@@ -20,12 +20,16 @@ import {MatFormFieldModule, MatInputModule, MatButtonModule} from '@angular/mate
 
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { Login } from './login/login.component';
+import { LoginService } from './login/login.service';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard';
+
 
 @NgModule({
     declarations: [
         AppComponent,
         LessonsComponent,
         UserDashboardComponent,
+        AdminDashboardComponent,
         Login
     ],
     imports: [
@@ -42,6 +46,7 @@ import { Login } from './login/login.component';
     providers: [
         LessonsService,
         NewsletterService,
+        LoginService,
     ],
     bootstrap: [AppComponent]
 })
