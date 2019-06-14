@@ -1,11 +1,11 @@
 
-## Angular PWA Course - Build the future of the Web Today
+## PoshION - Build the future of the Web Today
 
-This repository contains the code of the [Angular PWA Course - Build the future of the Web Today](https://angular-university.io/course/angular-pwa-course).
+This repository contains the code of the [PoshION - Build the future of the Web Today](https://angular-university.io/course/angular-pwa-course).
 
 This course repository is updated to Angular 8, and there is a  package-lock.json file available, for avoiding semantic versioning installation issues.
 
-![Angular PWA Course - Build the future of the Web Today](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-pwa-course.png)
+![PoshION - Build the future of the Web Today](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-pwa-course.png)
 
 
 # Installation pre-requisites
