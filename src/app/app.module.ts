@@ -22,14 +22,13 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AppRoutingModule} from "./app-routing.module";
 import {NewsletterService} from "./services/newsletter.service";
-
-
-
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        LessonsComponent
+        LessonsComponent,
+        UserDashboardComponent
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -42,7 +41,7 @@ import {NewsletterService} from "./services/newsletter.service";
     ],
     providers: [
         LessonsService,
-        NewsletterService
+        NewsletterService,
     ],
     bootstrap: [AppComponent]
 })
