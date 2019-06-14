@@ -1,8 +1,8 @@
 export const ORDER_REVIEW = {
   8001: {
     rating: 1,
-    description: '',
-    title: '',
+    description: 'On time',
+    title: 'Bravo! ordered delivered on time.',
   },
   8002: {
     rating: 4,
@@ -21,7 +21,7 @@ export const ORDER_REVIEW = {
   },
   8005: {
     rating: 4,
-    description: '',
-    title: '',
+    description: 'Too late',
+    title: 'Took 15 minutes to prepare maggi.',
   },
 };

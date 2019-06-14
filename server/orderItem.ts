@@ -1,4 +1,4 @@
-import { ITEMS } from './items';
+import { ITEMS } from './menu';
 
 export const ORDER_ITEM = {
   3001: {

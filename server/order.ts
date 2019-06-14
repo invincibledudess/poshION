@@ -14,8 +14,7 @@ export const ORDER = {
     tentativeCompletionTime: 0,
     completeTime: 0,
     cancellationRemark: '',
-    orderReview: '',
-    itemReview: [],
+    review: ORDER_REVIEW[8005]
   },  
   2002: {
     orderItem: [ORDER_ITEM[3003], ORDER_ITEM[3004] ],
@@ -28,8 +27,7 @@ export const ORDER = {
     tentativeCompletionTime: 300000,
     completeTime: 0,
     cancellationRemark: '',
-    orderReview: '',
-    itemReview: [],
+    review: ORDER_REVIEW[8004]
   },  
   2003: {
     orderItem: [ORDER_ITEM[3004] ],
@@ -42,8 +40,7 @@ export const ORDER = {
     tentativeCompletionTime: 0,
     completeTime: 0,
     cancellationRemark: '',
-    orderReview: '',
-    itemReview: [],
+    review: ORDER_REVIEW[8003]
   },  
   2004: {
     orderItem: [ORDER_ITEM[3001] ],
@@ -56,8 +53,7 @@ export const ORDER = {
     tentativeCompletionTime: 330000,
     completeTime: 0,
     cancellationRemark: 'Wait time was just too much',
-    orderReview: '',
-    itemReview: [],
+    review: ORDER_REVIEW[8002]
   }
 
   ,  
@@ -72,7 +68,6 @@ export const ORDER = {
     tentativeCompletionTime: 30000,
     completeTime: 1560516986485,
     cancellationRemark: '',
-    orderReview: ORDER_REVIEW[8001],
-    itemReview: [],
+    review: ORDER_REVIEW[8001]
   }
 };
