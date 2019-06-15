@@ -62,7 +62,7 @@ export const ORDER = {
     orderStatus: '',
     userRemark: 'This is the user remark against fifth order.',
     paymentMode: 'CASH',
-    user: USERS[1005],
+    user: USERS[1004],
     rejectionRemark: '',
     createTime: 1560515952046,
     tentativeCompletionTime: 30000,

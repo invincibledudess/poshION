@@ -34,3 +34,14 @@ main {
     background-color: #aef7ae;
 }
 
+.logout-link {
+    margin-right: 20px;
+}
+
+.align-left {
+    float: left;
+}
+
+.align-right {
+    float: right;
+}

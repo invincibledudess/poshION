@@ -1,9 +1,14 @@
 <header class="l-header">
         <ul class="top-menu disable-link-styles">
-            <li class="logo-small-container">
+            <li class="logo-small-container align-left">
                 <a class="v-center-block-parent">
                     <img class="v-center-block logo-small angular-university-logo"
                          src="/assets/logo_main_page.png">
+                </a>
+            </li>
+            <li *ngIf="loginService.getIsUserLoggedIn()" (click)="loginService.setIsUserLoggedIn(false)" class="logout-link align-right">
+                <a [routerLink]="['']">
+                  Logout  
                 </a>
             </li>
         </ul>

@@ -16,13 +16,18 @@ export class Login {
   submit() {
     this.loginService.login({username: this.username.value, password: this.password.value}).subscribe(
         (userDetails) => {
+          debugger;
+          this.loginService.setIsUserLoggedIn(true);
           if (userDetails['role'] === 'customer') {
             this.router.navigate(['/userDashboard']);
           } else {
             this.router.navigate(['/adminDashboard']);
           }
         },
-        err =>  console.log('Could not send subscription object to server, reason: ', err)
+        err =>  {
+          this.loginService.setIsUserLoggedIn(false);
+          console.log('Could not send subscription object to server, reason: ', err);
+        }
     );
   }
 }

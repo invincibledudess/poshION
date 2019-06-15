@@ -6,7 +6,9 @@ const order = ORDER;
 
 export function getUserOrders(req, res) {
     const userId = req.params.userId;
-    res.status(200).json(USERS[userId].pastOrders);
+    const user = USERS[Object.keys(USERS).find((u) => USERS[u].id === userId)];
+
+    res.status(200).json(user.pastOrders);
 }
 
 export function getOrderById(req, res) {
